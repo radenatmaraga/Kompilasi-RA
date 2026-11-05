@@ -15,12 +15,12 @@
     --teal-light: #b8e6e0;
   }
   html, body { height: 100%; }
-  body { font-family: 'Segoe UI', -apple-system, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; display: flex; flex-direction: column; height: 100vh; }
+  body { font-family: 'Segoe UI', -apple-system, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
   .progress { height: 4px; background: var(--border); flex-shrink: 0; }
   .progress > div { height: 100%; background: linear-gradient(90deg, var(--teal2), var(--mint), var(--cream)); transition: width .35s ease; }
   .topbar { padding: 12px 24px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); flex-shrink: 0; background: #fff; }
   .topbar strong { color: var(--teal); font-weight: 700; }
-  .stage { flex: 1; display: flex; align-items: center; justify-content: center; padding: 18px; overflow: hidden; min-height: 0; }
+  .stage { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; padding: 18px; overflow: hidden; min-height: 0; min-width: 0; touch-action: pan-y; }
   .slide { width: 100%; max-width: 1180px; max-height: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 28px 38px; overflow-y: auto; animation: fadeIn .3s ease; box-shadow: 0 8px 32px var(--shadow); }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
   .slide::-webkit-scrollbar { width: 7px; }
@@ -90,7 +90,7 @@
   .refs li { margin-bottom: 5px; }
   .refs a { color: var(--teal2); text-decoration: none; word-break: break-all; }
   .refs a:hover { text-decoration: underline; }
-  .nav { flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 10px 22px; border-top: 1px solid var(--border); background: #fff; gap: 10px; }
+  .nav { position: relative; z-index: 5; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 10px 22px; padding-bottom: calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid var(--border); background: #fff; gap: 10px; }
   .nav-group { display: flex; gap: 6px; align-items: center; }
   button { font-family: inherit; font-size: 12px; font-weight: 600; color: var(--teal); background: #fff; border: 1px solid var(--border); padding: 8px 14px; border-radius: 10px; cursor: pointer; transition: all .18s; }
   button:hover:not(:disabled) { background: var(--soft); border-color: var(--teal2); }
@@ -109,11 +109,25 @@
   aside.notes .notes-head button { padding: 5px 10px; font-size: 11px; }
   aside.notes p { font-size: 13px; line-height: 1.6; color: #2c4a5a; white-space: pre-wrap; }
   @media (max-width: 800px) {
-    .slide { padding: 18px 14px; }
+    html, body { min-height: 100%; }
+    body { height: 100vh; height: 100dvh; }
+    .topbar { padding: 10px 12px; font-size: 11px; gap: 8px; }
+    .stage { padding: 10px; }
+    .slide { width: 100%; max-width: 100%; max-height: 100%; padding: 18px 14px; border-radius: 14px; -webkit-overflow-scrolling: touch; }
     h1 { font-size: 19px; } h2 { font-size: 15px; }
     .cols, .cols-3, .grid2 { grid-template-columns: 1fr; }
     .dots { display: none; }
     table { font-size: 9.5px; }
+    .nav { padding: 8px 12px; padding-bottom: calc(8px + env(safe-area-inset-bottom)); gap: 8px; min-height: 58px; }
+    .nav-group { gap: 8px; }
+    .nav button { min-width: 42px; min-height: 40px; padding: 9px 12px; font-size: 14px; touch-action: manipulation; }
+    .counter { white-space: nowrap; font-size: 11px; }
+    aside.notes { max-height: 50dvh; padding: 14px 16px; }
+  }
+  @media (max-width: 380px) {
+    .topbar { font-size: 10px; }
+    .nav { padding-left: 8px; padding-right: 8px; }
+    .nav button { min-width: 40px; padding: 8px 10px; }
   }
 </style>
 </head>
@@ -1382,6 +1396,40 @@ function goTo(i) {
 
 prevBtn.addEventListener('click', () => goTo(cur - 1));
 nextBtn.addEventListener('click', () => goTo(cur + 1));
+
+/* Navigasi swipe untuk perangkat mobile */
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+
+const swipeArea = document.querySelector('.stage');
+
+swipeArea.addEventListener('touchstart', (e) => {
+  if (!e.touches || e.touches.length !== 1) return;
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+swipeArea.addEventListener('touchend', (e) => {
+  if (!e.changedTouches || e.changedTouches.length !== 1) return;
+
+  touchEndX = e.changedTouches[0].clientX;
+  touchEndY = e.changedTouches[0].clientY;
+
+  const deltaX = touchEndX - touchStartX;
+  const deltaY = touchEndY - touchStartY;
+
+  // Abaikan gerakan vertikal agar isi slide tetap bisa di-scroll.
+  if (Math.abs(deltaX) < 55 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
+
+  if (deltaX < 0) {
+    goTo(cur + 1);
+  } else {
+    goTo(cur - 1);
+  }
+}, { passive: true });
+
 notesBtn.addEventListener('click', () => notesPanel.classList.toggle('open'));
 closeNotes.addEventListener('click', () => notesPanel.classList.remove('open'));
 
