@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spinal Anestesi — 31 Slide Lengkap</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #f7fbfc; --card: #ffffff; --soft: #eaf4f6;
+    --text: #1a3a4a; --muted: #5b7c85;
+    --teal: #0d6b7a; --teal2: #2a9d8f; --mint: #b8e0d2;
+    --cream: #f5eddc; --amber: #c99a3f; --rose: #c96b5c;
+    --border: #cde3e8; --shadow: rgba(13,107,122,.08);
+    --teal-light: #b8e6e0;
+  }
+  html, body { height: 100%; }
+  body { font-family: 'Segoe UI', -apple-system, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; display: flex; flex-direction: column; height: 100vh; }
+  .progress { height: 4px; background: var(--border); flex-shrink: 0; }
+  .progress > div { height: 100%; background: linear-gradient(90deg, var(--teal2), var(--mint), var(--cream)); transition: width .35s ease; }
+  .topbar { padding: 12px 24px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); flex-shrink: 0; background: #fff; }
+  .topbar strong { color: var(--teal); font-weight: 700; }
+  .stage { flex: 1; display: flex; align-items: center; justify-content: center; padding: 18px; overflow: hidden; min-height: 0; }
+  .slide { width: 100%; max-width: 1180px; max-height: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 28px 38px; overflow-y: auto; animation: fadeIn .3s ease; box-shadow: 0 8px 32px var(--shadow); }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  .slide::-webkit-scrollbar { width: 7px; }
+  .slide::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .badge { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 10px; }
+  .badge-teal { background: #e0f2f1; color: var(--teal); }
+  .badge-amber { background: #fef3e2; color: #8a6a1e; }
+  .badge-mint { background: #e8f5e9; color: #2e7d32; }
+  .badge-rose { background: #fdecea; color: #b04a30; }
+  .badge-cream { background: #faf3e8; color: #8a6d3b; }
+  h1 { font-size: 26px; line-height: 1.25; font-weight: 800; margin-bottom: 10px; color: var(--teal); }
+  h2 { font-size: 19px; line-height: 1.3; font-weight: 700; margin-bottom: 10px; color: var(--text); }
+  h3 { font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--teal); letter-spacing: .02em; }
+  .sub { font-size: 12.5px; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
+  .meta { font-size: 11.5px; color: var(--muted); padding-top: 10px; border-top: 1px solid var(--border); }
+  ul.pts { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 8px; }
+  ul.pts li { position: relative; padding-left: 18px; line-height: 1.45; font-size: 12px; color: #2c4a5a; }
+  ul.pts li::before { content: "●"; position: absolute; left: 0; color: var(--teal2); font-size: 9px; top: 4px; }
+  ul.pts li b { color: var(--teal); }
+  .key { margin-top: 10px; padding: 10px 14px; background: #f0f9ff; border-left: 4px solid var(--teal2); border-radius: 10px; font-size: 12px; line-height: 1.5; color: #2c4a5a; }
+  .key b { color: var(--teal); }
+  .quote-box { margin: 8px 0; padding: 10px 14px; background: #fff8e8; border-left: 4px solid var(--amber); border-radius: 10px; font-size: 11.5px; line-height: 1.5; color: #4a3a1a; font-style: italic; }
+  .quote-box .trans { display: block; margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--amber); font-style: normal; color: #2c4a5a; }
+  .quote-box .trans b { color: var(--teal); font-style: normal; }
+  .script-box { margin: 6px 0; padding: 10px 14px; background: #f0faf9; border-radius: 10px; border: 1px solid var(--teal-light); font-size: 12px; line-height: 1.55; color: #2c4a5a; }
+  .script-box .say { display: block; color: var(--teal); font-weight: 700; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 3px; }
+  .script-box .quote { font-style: italic; color: #1a3a4a; }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 8px; font-size: 11px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--soft); color: var(--teal); font-weight: 700; font-size: 9.5px; letter-spacing: .04em; text-transform: uppercase; }
+  td { color: #2c4a5a; }
+  td b { color: var(--teal); }
+  .cite { font-size: 9.5px; color: var(--muted); font-style: italic; margin-top: 4px; display: block; line-height: 1.5; }
+  .cite a { color: var(--teal2); text-decoration: none; }
+  .cite a:hover { text-decoration: underline; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  .cols-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+  .col-box { padding: 11px 13px; border-radius: 12px; background: var(--soft); border: 1px solid var(--border); }
+  .col-box h4 { font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+  .col-box.teal h4 { color: var(--teal); }
+  .col-box.mint h4 { color: #2e7d32; }
+  .col-box.amber h4 { color: #8a6d3b; }
+  .col-box.rose h4 { color: var(--rose); }
+  .col-box ul { list-style: none; }
+  .col-box li { font-size: 11.5px; line-height: 1.4; color: #2c4a5a; padding-left: 13px; position: relative; margin-bottom: 4px; }
+  .col-box li::before { content: "•"; position: absolute; left: 2px; color: var(--muted); }
+  .col-box li b { color: var(--teal); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+  .mini-card { padding: 10px 12px; border-radius: 12px; background: var(--soft); border: 1px solid var(--border); font-size: 11.5px; line-height: 1.4; }
+  .mini-card .num { color: var(--teal2); font-weight: 800; font-size: 13px; display: block; margin-bottom: 3px; }
+  .mini-card b { color: var(--teal); }
+  .case { padding: 11px 14px; border-radius: 12px; background: var(--soft); border: 1px solid var(--border); margin-bottom: 8px; font-size: 12px; line-height: 1.5; }
+  .case .label { font-size: 10px; font-weight: 700; color: var(--teal2); text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 3px; }
+  .case b { color: var(--teal); }
+
+  /* PDPH baru */
+  .steps { display: flex; flex-direction: column; gap: 8px; margin: 8px 0; }
+  .step { display: flex; gap: 10px; padding: 10px 12px; background: var(--soft); border-radius: 10px; border: 1px solid var(--border); }
+  .step-num { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--teal); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; }
+  .step-body { flex: 1; font-size: 11.5px; line-height: 1.5; }
+  .step-body b { color: var(--teal); }
+  .analogy { margin: 8px 0; padding: 10px 14px; background: #fff8e8; border-left: 4px solid var(--amber); border-radius: 10px; font-size: 11.5px; line-height: 1.55; color: #4a3a1a; }
+  .analogy b { color: var(--teal); }
+
+  .refs { font-size: 10.5px; line-height: 1.55; color: #2c4a5a; }
+  ol.refs { padding-left: 16px; }
+  .refs li { margin-bottom: 5px; }
+  .refs a { color: var(--teal2); text-decoration: none; word-break: break-all; }
+  .refs a:hover { text-decoration: underline; }
+  .nav { flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 10px 22px; border-top: 1px solid var(--border); background: #fff; gap: 10px; }
+  .nav-group { display: flex; gap: 6px; align-items: center; }
+  button { font-family: inherit; font-size: 12px; font-weight: 600; color: var(--teal); background: #fff; border: 1px solid var(--border); padding: 8px 14px; border-radius: 10px; cursor: pointer; transition: all .18s; }
+  button:hover:not(:disabled) { background: var(--soft); border-color: var(--teal2); }
+  button:disabled { opacity: .35; cursor: not-allowed; }
+  button.primary { background: var(--teal); color: #fff; border-color: var(--teal); }
+  button.primary:hover:not(:disabled) { background: #0a5f6e; }
+  .counter { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .counter strong { color: var(--teal); }
+  .dots { display: flex; gap: 3px; flex-wrap: wrap; justify-content: center; flex: 1; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; padding: 0; transition: all .18s; }
+  .dot.active { background: var(--teal2); transform: scale(1.3); }
+  .dot:hover { background: var(--teal); }
+  aside.notes { position: fixed; bottom: 0; left: 0; right: 0; max-height: 42vh; background: #fff; border-top: 2px solid var(--teal2); padding: 16px 24px; overflow-y: auto; transform: translateY(100%); transition: transform .28s ease; z-index: 50; box-shadow: 0 -8px 32px var(--shadow); }
+  aside.notes.open { transform: translateY(0); }
+  aside.notes .notes-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--teal); }
+  aside.notes .notes-head button { padding: 5px 10px; font-size: 11px; }
+  aside.notes p { font-size: 13px; line-height: 1.6; color: #2c4a5a; white-space: pre-wrap; }
+  @media (max-width: 800px) {
+    .slide { padding: 18px 14px; }
+    h1 { font-size: 19px; } h2 { font-size: 15px; }
+    .cols, .cols-3, .grid2 { grid-template-columns: 1fr; }
+    .dots { display: none; }
+    table { font-size: 9.5px; }
+  }
+</style>
+</head>
+<body>
+<div class="progress"><div id="progressBar" style="width:0%"></div></div>
+<div class="topbar"><span>🩺 <strong>Spinal Anestesi</strong> — 31 Slide Lengkap</span><span id="topLabel">Pembuka</span></div>
+<div class="stage"><div class="slide" id="slide"></div></div>
+<div class="nav">
+  <div class="nav-group"><button id="prevBtn">←</button><span class="counter"><strong id="curNum">1</strong> / <span id="totNum"></span></span></div>
+  <div class="dots" id="dots"></div>
+  <div class="nav-group"><button id="notesBtn">🗒️</button><button id="nextBtn" class="primary">→</button></div>
+</div>
+<aside class="notes" id="notesPanel">
+  <div class="notes-head"><span>🗒️ Notes — <span id="notesSlideNum"></span></span><button id="closeNotes">✕</button></div>
+  <p id="notesBody"></p>
+</aside>
+
+<script>
+const slides = [
+
+/* 1 */
+{
+  label: 'Pembuka',
+  html: `
+    <span class="badge badge-teal">Pembuka</span>
+    <h1>Spinal Anestesi — Persiapan, Asistensi &amp; Simulasi</h1>
+    <p class="sub">31 slide: mekanisme, level blok, indikasi, kontraindikasi, kelebihan-keterbatasan, pemilihan teknik, prosedur, monitoring, penanganan komplikasi (termasuk PDPH detail), dan asistensi posisi.</p>
+    <div class="meta">[Nama Presenter] · [Institusi] · [Tanggal] · Estimasi 60 menit</div>
+  `,
+  notes: "Sesi 31 slide. Versi ini adalah 29 slide sebelumnya + 2 slide PDPH yang disisipkan setelah Keterbatasan."
+},
+
+/* 2 */
+{
+  label: 'Daftar Singkatan',
+  html: `
+    <span class="badge badge-teal">Referensi Cepat</span>
+    <h2>Daftar Singkatan &amp; Fungsinya</h2>
+    <p class="sub">Singkatan = <b>istilah standar</b> literatur medis, agar komunikasi ringkas, presisi, tidak ambigu.</p>
+    <table>
+      <thead><tr><th>Singkatan</th><th>Kepanjangan</th><th>Fungsi</th></tr></thead>
+      <tbody>
+        <tr><td><b>GA</b></td><td>General Anesthesia</td><td>Anestesi umum — pembanding utama</td></tr>
+        <tr><td><b>PNB</b></td><td>Peripheral Nerve Block</td><td>Blok saraf perifer</td></tr>
+        <tr><td><b>CSF</b></td><td>Cerebrospinal Fluid</td><td>Cairan serebrospinal</td></tr>
+        <tr><td><b>PDPH</b></td><td>Post-Dural Puncture Headache</td><td>Sakit kepala pasca-pungsi dura</td></tr>
+        <tr><td><b>PONV</b></td><td>Postoperative Nausea and Vomiting</td><td>Mual-muntah pascaoperasi</td></tr>
+        <tr><td><b>LOS</b></td><td>Length of Stay</td><td>Lama rawat inap</td></tr>
+        <tr><td><b>WMD</b></td><td>Weighted Mean Difference</td><td>Ukuran efek meta-analisis</td></tr>
+        <tr><td><b>SMD</b></td><td>Standardized Mean Difference</td><td>Ukuran efek skala berbeda</td></tr>
+        <tr><td><b>RR</b></td><td>Relative Risk</td><td>Risiko relatif</td></tr>
+        <tr><td><b>OR</b></td><td>Odds Ratio</td><td>Rasio odds</td></tr>
+        <tr><td><b>CI</b></td><td>Confidence Interval</td><td>Interval kepercayaan</td></tr>
+        <tr><td><b>ASRA</b></td><td>American Society of Regional Anesthesia</td><td>Penerbit guideline antikoagulan</td></tr>
+        <tr><td><b>DOAC</b></td><td>Direct Oral Anticoagulant</td><td>Apixaban, rivaroxaban, dabigatran</td></tr>
+        <tr><td><b>CrCl</b></td><td>Creatinine Clearance</td><td>Fungsi ginjal</td></tr>
+        <tr><td><b>TIK</b></td><td>Tekanan Intrakranial</td><td>Kontraindikasi absolut jika ↑</td></tr>
+        <tr><td><b>HOCM</b></td><td>Hypertrophic Obstructive Cardiomyopathy</td><td>Kontraindikasi relatif</td></tr>
+        <tr><td><b>MS</b></td><td>Multiple Sclerosis</td><td>Kontraindikasi relatif</td></tr>
+        <tr><td><b>ERAS</b></td><td>Enhanced Recovery After Surgery</td><td>Protokol pemulihan</td></tr>
+        <tr><td><b>USG</b></td><td>Ultrasonografi</td><td>Panduan PNB</td></tr>
+        <tr><td><b>SC</b></td><td>Seksio Sesarea</td><td>Operasi caesar</td></tr>
+        <tr><td><b>TURP</b></td><td>Transurethral Resection of Prostate</td><td>Reseksi prostat</td></tr>
+        <tr><td><b>ORIF</b></td><td>Open Reduction Internal Fixation</td><td>Operasi fraktur</td></tr>
+        <tr><td><b>SVR</b></td><td>Systemic Vascular Resistance</td><td>Resistensi vaskular</td></tr>
+        <tr><td><b>VF</b></td><td>Ventricular Fibrillation</td><td>Fibrilasi ventrikel</td></tr>
+        <tr><td><b>PAD</b></td><td>Peripheral Artery Disease</td><td>Penyakit arteri perifer</td></tr>
+        <tr><td><b>PPOK</b></td><td>Penyakit Paru Obstruktif Kronik</td><td>Komorbid paru</td></tr>
+        <tr><td><b>OSA</b></td><td>Obstructive Sleep Apnea</td><td>Sleep apnea obstruktif</td></tr>
+        <tr><td><b>PACU</b></td><td>Post-Anesthesia Care Unit</td><td>Ruang pemulihan</td></tr>
+        <tr><td><b>LAST</b></td><td>Local Anesthetic Systemic Toxicity</td><td>Toksisitas anestesi lokal sistemik</td></tr>
+        <tr><td><b>ICHD-3</b></td><td>International Classification of Headache Disorders ed. 3</td><td>Klasifikasi standar sakit kepala (PDPH)</td></tr>
+      </tbody>
+    </table>
+    <div class="cite">📚 Sumber: <a href="https://www.asra.com/" target="_blank">ASRA</a>; <a href="https://nysora.com/" target="_blank">NYSORA</a>; <a href="https://ichd-3.org/" target="_blank">ICHD-3</a>.</div>
+  `,
+  notes: "30 singkatan + fungsinya. ICHD-3 dan LAST ditambahkan karena berkaitan dengan slide PDPH dan komplikasi."
+},
+
+/* 3 */
+{
+  label: 'Peta 31 Slide',
+  html: `
+    <span class="badge badge-teal">Peta Perjalanan</span>
+    <h2>Peta 31 Slide</h2>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Fondasi (4–5)</h4>
+        <ul>
+          <li>Mekanisme kerja</li>
+          <li>Level blok &amp; dermatom</li>
+        </ul>
+        <h4 style="margin-top:8px">Pilar 1 (6–10)</h4>
+        <ul>
+          <li>Indikasi (2 slide)</li>
+          <li>Kontraindikasi (2 slide)</li>
+          <li>Antikoagulan</li>
+        </ul>
+      </div>
+      <div class="col-box mint">
+        <h4>Pilar 2 (11–15)</h4>
+        <ul>
+          <li>Kelebihan</li>
+          <li>Keterbatasan</li>
+          <li><b>PDPH — Mekanisme (baru)</b></li>
+          <li><b>PDPH — Faktor &amp; Terapi (baru)</b></li>
+          <li>Faktor modifikasi</li>
+        </ul>
+        <h4 style="margin-top:8px">Pilar 3 (16–18)</h4>
+        <ul>
+          <li>Prinsip</li>
+          <li>Spinal vs PNB</li>
+          <li>Spinal vs GA</li>
+        </ul>
+      </div>
+      <div class="col-box amber">
+        <h4>Praktik (19–24)</h4>
+        <ul>
+          <li>Alat &amp; bahan</li>
+          <li>Prosedur step-by-step</li>
+          <li>Konfirmasi CSF &amp; injeksi</li>
+          <li>Monitoring</li>
+          <li>Hipotensi &amp; bradikardia</li>
+          <li>Komplikasi lain</li>
+        </ul>
+      </div>
+      <div class="col-box rose">
+        <h4>Pilar 4 (25–28)</h4>
+        <ul>
+          <li>Posisi duduk</li>
+          <li>Posisi lateral</li>
+          <li>Perbandingan</li>
+          <li>Peran asisten</li>
+        </ul>
+        <h4 style="margin-top:8px">Penutup (29–31)</h4>
+        <ul>
+          <li>Studi kasus</li>
+          <li>Take-home</li>
+          <li>Daftar pustaka</li>
+        </ul>
+      </div>
+    </div>
+  `,
+  notes: "31 slide. PDPH ditambahkan sebagai 2 slide baru di Pilar 2 (nomor 13-14)."
+},
+
+/* 4 */
+{
+  label: 'Mekanisme Kerja',
+  html: `
+    <span class="badge badge-teal">Fondasi · Mekanisme</span>
+    <h2>Mekanisme Kerja Spinal Anestesi</h2>
+    <p class="sub">Anestesi lokal disuntikkan ke <b>ruang subaraknoid</b>—ruang berisi CSF yang membungkus medula spinalis.</p>
+
+    <h3>1. Jalur Anatomis</h3>
+    <ul class="pts">
+      <li><b>Jarum menembus:</b> kulit → subkutan → lig. supraspinosum → interspinosum → flavum → ruang epidural → dura → araknoid → <b>ruang subaraknoid</b>.</li>
+      <li><b>Kedalaman:</b> ± 4–6 cm pada midline lumbal dewasa (lebih dalam pada obesitas).</li>
+      <li><b>Konfirmasi:</b> CSF keluar spontan → posisi tepat.</li>
+    </ul>
+
+    <h3>2. Mekanisme Molekuler</h3>
+    <ul class="pts">
+      <li>Anestesi lokal (bupivacaine) <b>memblokir kanal Na⁺</b> → tidak ada depolarisasi → tidak ada potensial aksi.</li>
+      <li>Serabut kecil (nyeri, suhu) <b>terblok lebih dulu</b>; motorik terakhir → urutan: nyeri → suhu → propriosepsi → motorik.</li>
+      <li><b>Opioid intratekal</b> bekerja pada reseptor di kornu dorsalis → analgesia tanpa blokade motorik.</li>
+    </ul>
+
+    <h3>3. Efek Fisiologis</h3>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Kardiovaskular</h4>
+        <ul>
+          <li>Blok simpatis → vasodilatasi + venodilatasi → ↓ SVR → ↓ TD.</li>
+          <li>↓ venous return → ↓ curah jantung → hipotensi.</li>
+          <li>Blok tinggi (T1–T4): bradikardia.</li>
+        </ul>
+      </div>
+      <div class="col-box mint">
+        <h4>Respirasi</h4>
+        <ul>
+          <li><b>Blok rendah (L1–L2):</b> tanpa efek.</li>
+          <li><b>Blok tinggi (T4+):</b> paralisis interkosta → sesak.</li>
+          <li>Diafragma (C3–C5) tetap bekerja.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cite">📚 Sumber: <a href="https://www.ncbi.nlm.nih.gov/books/NBK537121/" target="_blank">StatPearls — Spinal Anesthesia</a>; <a href="https://nysora.com/patient-information/spinal-anesthesia/" target="_blank">NYSORA</a>.</div>
+  `,
+  notes: "Jalur anatomis 8 lapis, mekanisme molekuler (blok Na+), efek kardiovaskular dan respirasi."
+},
+
+/* 5 */
+{
+  label: 'Level Blok & Dermatom',
+  html: `
+    <span class="badge badge-teal">Fondasi · Level Blok</span>
+    <h2>Level Blok &amp; Dermatom</h2>
+    <p class="sub"><b>T</b> = torakal, <b>L</b> = lumbal, <b>S</b> = sakral. Angka kecil = lebih tinggi. Level harus <b>sesuai dermatom operasi</b>.</p>
+
+    <table>
+      <thead><tr><th>Level</th><th>Landmark</th><th>Contoh Operasi</th></tr></thead>
+      <tbody>
+        <tr><td><b>T4</b></td><td>Puting susu</td><td>SC</td></tr>
+        <tr><td><b>T6</b></td><td>Prosesus xifoideus</td><td>Abdomen atas</td></tr>
+        <tr><td><b>T8</b></td><td>Kosta bawah</td><td>Testis, ovarium</td></tr>
+        <tr><td><b>T10</b></td><td>Umbilikus</td><td>Hip, TURP, kandung kemih</td></tr>
+        <tr><td><b>T12</b></td><td>Ligamentum inguinal</td><td>Ekstremitas bawah (tanpa tourniquet)</td></tr>
+        <tr><td><b>L1</b></td><td>Lipat paha</td><td>Paha atas</td></tr>
+        <tr><td><b>L3</b></td><td>Epikondilus medial femur</td><td>Lutut bagian dalam</td></tr>
+        <tr><td><b>L4</b></td><td>Maleolus medial</td><td>Mata kaki dalam</td></tr>
+        <tr><td><b>L5</b></td><td>Dorsum pedis + jari 1</td><td>Punggung kaki</td></tr>
+        <tr><td><b>S2–S4</b></td><td>Perineum, anus</td><td>Hemoroid</td></tr>
+      </tbody>
+    </table>
+
+    <div class="key"><b>Risiko High Spinal:</b> L1–L2 (titik pungsi tinggi) hanya ± 8–9 segmen dari T4 → buffer sedikit → <b>penyebaran ke atas lebih mudah</b>. L3–L4 standar (± 11–12 segmen) lebih aman.</div>
+    <div class="cite">📚 Sumber: <a href="https://www.physio-pedia.com/Dermatomes" target="_blank">Physiopedia — Dermatomes</a>; <a href="https://www.ncbi.nlm.nih.gov/books/NBK535401/" target="_blank">StatPearls — Dermatomes</a>; <a href="https://nysora.com/topics/complications/high-spinal-block/" target="_blank">NYSORA — High Spinal Block</a>.</div>
+  `,
+  notes: "Landmark dermatom T4-S4. L1-L2 titik pungsi tinggi berisiko high spinal karena jarak ke T4 hanya 8-9 segmen."
+},
+
+/* 6 */
+{
+  label: 'Pilar 1 — Indikasi Lokasi',
+  html: `
+    <span class="badge badge-mint">Pilar 1a · Indikasi Lokasi</span>
+    <h2>Indikasi — Berdasarkan Lokasi Anatomis</h2>
+    <p class="sub">Spinal untuk prosedur dengan durasi diketahui di area <b>ekstremitas bawah, perineum, panggul, abdomen bawah</b>.</p>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Ekstremitas Bawah</h4>
+        <ul>
+          <li><b>ORIF ankle/knee/hip</b></li>
+          <li><b>Artroplasti panggul/lutut</b></li>
+          <li><b>Amputasi tungkai bawah</b> — DM, PAD</li>
+          <li><b>Bypass femoropopliteal</b></li>
+          <li><b>Artroskopi lutut</b></li>
+        </ul>
+      </div>
+      <div class="col-box mint">
+        <h4>Panggul &amp; Perineum</h4>
+        <ul>
+          <li><b>Hemoroidektomi</b></li>
+          <li><b>Fistulektomi ani</b></li>
+          <li><b>TURP</b></li>
+          <li><b>Histerektomi vaginal</b></li>
+          <li><b>Seksio sesarea</b> (standar emas)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="col-box amber">
+        <h4>Abdomen Bawah</h4>
+        <ul>
+          <li><b>Herniorafi inguinalis</b></li>
+          <li><b>Apendektomi</b> terpilih</li>
+          <li><b>Sistoskopi</b></li>
+          <li><b>Miomektomi</b></li>
+        </ul>
+      </div>
+      <div class="col-box rose">
+        <h4>Catatan</h4>
+        <ul>
+          <li>Tidak otomatis "di bawah umbilikus = spinal"</li>
+          <li>Abdomen atas jarang — level terlalu tinggi</li>
+          <li>Pertimbangkan durasi &amp; profil pasien</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cite">📚 Sumber: <a href="https://kms.kemkes.go.id/contents/1723169192341-11.BukuAjarANESTESIREGIONAL.pdf" target="_blank">Kemenkes RI</a>; <a href="https://www.cmelearn.org/" target="_blank">CME Learn</a>.</div>
+  `,
+  notes: "Indikasi lokasi 3 kategori. Tidak otomatis semua di bawah umbilikus."
+},
+
+/* 7 */
+{
+  label: 'Pilar 1 — Indikasi Durasi & Kondisi',
+  html: `
+    <span class="badge badge-mint">Pilar 1b · Indikasi Durasi &amp; Kondisi</span>
+    <h2>Indikasi — Durasi &amp; Keuntungan Klinis</h2>
+    <h3>1. Durasi Operasi</h3>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Injeksi Tunggal</h4>
+        <ul>
+          <li>Durasi efektif: <b>1,5–4 jam</b> (tergantung obat &amp; dosis)</li>
+          <li>Bupivacaine 0,5% hyperbaric: ± 2–3 jam</li>
+          <li>Cocok untuk operasi dengan durasi dapat diprediksi</li>
+        </ul>
+      </div>
+      <div class="col-box amber">
+        <h4>Operasi Lebih Panjang</h4>
+        <ul>
+          <li><b>Kateter spinal</b> — injeksi berulang</li>
+          <li><b>Kombinasi spinal-epidural (CSE)</b></li>
+          <li>Berguna jika ada alasan menghindari GA</li>
+        </ul>
+      </div>
+    </div>
+    <h3>2. Keuntungan Klinis — Kondisi Pasien</h3>
+    <ul class="pts">
+      <li><b>Pasien yang ingin tetap sadar:</b> komunikasi intraoperatif.</li>
+      <li><b>Komorbiditas paru:</b> PPOK, asma berat, fibrosis kistik, OSA.</li>
+      <li><b>Jalan napas sulit:</b> hindari intubasi.</li>
+      <li><b>Obstetri:</b> hindari aspirasi &amp; gagal intubasi.</li>
+      <li><b>Lansia/demensia:</b> hindari komplikasi kognitif GA.</li>
+      <li><b>Gangguan neuromuskular:</b> hindari hipertermia maligna.</li>
+    </ul>
+    <div class="key"><b>Pesan kunci:</b> indikasi = irisan <b>lokasi × durasi × profil pasien</b>.</div>
+    <div class="cite">📚 Sumber: <a href="https://doi.org/10.1016/j.bjae.2021.11.004" target="_blank">BJA Education — Continuous spinal anaesthesia</a>; <a href="https://kms.kemkes.go.id/contents/1723169192341-11.BukuAjarANESTESIREGIONAL.pdf" target="_blank">Kemenkes RI</a>.</div>
+  `,
+  notes: "Durasi 1,5-4 jam. 6 kondisi pasien yang diuntungkan."
+},
+
+/* 8 */
+{
+  label: 'Pilar 1 — Kontraindikasi Absolut',
+  html: `
+    <span class="badge badge-rose">Pilar 1c · Kontraindikasi Absolut</span>
+    <h2>Kontraindikasi Absolut — Jangan Dilakukan</h2>
+    <table>
+      <thead><tr><th>Kondisi</th><th>Mekanisme Risiko</th></tr></thead>
+      <tbody>
+        <tr><td><b>Penolakan pasien</b></td><td>Otonomi pasien</td></tr>
+        <tr><td><b>Sepsis lokal</b> di lokasi pungsi</td><td>Meningitis/abses epidural</td></tr>
+        <tr><td><b>Alergi</b> obat</td><td>Anafilaksis</td></tr>
+        <tr><td><b>Pasien tidak bisa diam</b></td><td>Cedera saraf, hematoma</td></tr>
+        <tr><td><b>TIK meningkat</b></td><td>Herniasi batang otak</td></tr>
+        <tr><td><b>Hipovolemia berat / syok</b></td><td>Kolaps kardiovaskular</td></tr>
+        <tr><td><b>Koagulopati frank</b></td><td>Hematoma spinal → kelumpuhan</td></tr>
+        <tr><td><b>Spina bifida / meningomielokel</b></td><td>Cedera medula</td></tr>
+      </tbody>
+    </table>
+    <h3>⚠ Stenosis Aorta Berat</h3>
+    <div class="quote-box">
+      "Spinal techniques should be avoided in severe aortic stenosis… should be regarded as absolutely contraindicated." — NCBI Bookshelf, 2025
+      <span class="trans"><b>Terjemahan:</b> "Teknik spinal sebaiknya dihindari pada stenosis aorta berat… harus dianggap sebagai kontraindikasi absolut."</span>
+    </div>
+    <ul class="pts">
+      <li><b>Alasan:</b> Jantung bergantung pada TD stabil. Spinal menurunkan TD mendadak → iskemia → VF.</li>
+      <li><b>Resusitasi VF</b> pada stenosis aorta berat <b>sangat sulit atau tidak mungkin</b>.</li>
+    </ul>
+    <div class="cite">📚 Sumber: <a href="https://www.ncbi.nlm.nih.gov/books/NBK564409/" target="_blank">NCBI Bookshelf — Spinal Opioids (2025)</a>; <a href="https://www.cmelearn.org/" target="_blank">CME Learn</a>.</div>
+  `,
+  notes: "8 kondisi absolut. Stenosis aorta berat — terjemahan: 'Teknik spinal sebaiknya dihindari pada stenosis aorta berat... harus dianggap sebagai kontraindikasi absolut.'"
+},
+
+/* 9 */
+{
+  label: 'Pilar 1 — Kontraindikasi Relatif',
+  html: `
+    <span class="badge badge-amber">Pilar 1d · Kontraindikasi Relatif</span>
+    <h2>Kontraindikasi Relatif — Nilai Risiko–Manfaat</h2>
+    <table>
+      <thead><tr><th>Kondisi</th><th>Mekanisme</th><th>Mitigasi</th></tr></thead>
+      <tbody>
+        <tr><td><b>Stenosis Aorta (moderat)</b></td><td>↓ SVR mendadak</td><td>Individual; kateter dosis kecil berulang</td></tr>
+        <tr><td><b>Hipovolemia</b></td><td>Hipotensi berlebihan</td><td>Resusitasi dulu</td></tr>
+        <tr><td><b>HOCM</b></td><td>↓ SVR → obstruksi memberat</td><td>Hindari ↓ SVR; opioid intratekal dosis rendah</td></tr>
+        <tr><td><b>Stenosis Mitral</b></td><td>Hipotensi berat</td><td>Pemantauan invasif</td></tr>
+        <tr><td><b>MS</b></td><td>Serabut demielinasi rentan</td><td>Kurangi dosis &amp; konsentrasi</td></tr>
+        <tr><td><b>Riwayat operasi tulang belakang</b></td><td>Akses sulit; sebaran tidak terprediksi</td><td>USG-guided</td></tr>
+        <tr><td><b>Deformitas spinal berat</b></td><td>Landmark sulit</td><td>USG-guided</td></tr>
+        <tr><td><b>Gangguan neurologis progresif</b></td><td>Perburukan sulit dibedakan</td><td>Dokumentasi baseline</td></tr>
+        <tr><td><b>Sepsis</b></td><td>Meningitis/abses</td><td>Nilai ulang; koreksi sumber infeksi</td></tr>
+      </tbody>
+    </table>
+    <div class="key"><b>Pesan kunci:</b> relatif <b>bukan larangan</b>—nilai risiko–manfaat dengan data.</div>
+    <div class="cite">📚 Sumber: <a href="https://nysora.com/patient-information/spinal-anesthesia/" target="_blank">NYSORA (2025)</a>; <a href="https://doi.org/10.1016/j.bjae.2019.12.002" target="_blank">BJA Education (2020)</a>.</div>
+  `,
+  notes: "9 kondisi relatif dengan mekanisme dan mitigasi."
+},
+
+/* 10 */
+{
+  label: 'Pilar 1 — Antikoagulan',
+  html: `
+    <span class="badge badge-rose">Pilar 1e · Kontraindikasi Waktu</span>
+    <h2>Antikoagulan — Kontraindikasi yang Bergerak</h2>
+    <p class="sub">Bukan "boleh/tidak"—soal <b>kapan</b>. ASRA 2025: komplikasi hemoragik <b>jarang tapi katastrofik</b>.</p>
+    <table>
+      <thead><tr><th>Agen</th><th>Interval Minimal</th><th>Catatan</th></tr></thead>
+      <tbody>
+        <tr><td><b>Apixaban dosis tinggi</b></td><td><b>72 jam</b></td><td>Ginjal normal; &lt;72 jam cek anti-Xa &lt;30 ng/mL</td></tr>
+        <tr><td><b>Rivaroxaban dosis tinggi</b></td><td><b>72 jam</b></td><td>Aturan sama</td></tr>
+        <tr><td><b>Dabigatran — CrCl ≥50</b></td><td><b>72 jam</b></td><td>Eliminasi ginjal</td></tr>
+        <tr><td><b>Dabigatran — CrCl 30–49</b></td><td><b>120 jam</b></td><td>Ekskresi melambat</td></tr>
+        <tr><td><b>Aspirin 325 mg/hari</b></td><td><b>Tidak perlu stop</b></td><td>Risiko tidak meningkat bermakna</td></tr>
+        <tr><td><b>Clopidogrel</b></td><td><b>7 hari</b></td><td>ASRA 2025</td></tr>
+        <tr><td><b>Enoxaparin profilaksis</b></td><td><b>12 jam</b></td><td>40 mg/hari</td></tr>
+        <tr><td><b>Enoxaparin terapeutik</b></td><td><b>24 jam</b></td><td>1 mg/kg BID</td></tr>
+        <tr><td><b>Warfarin</b></td><td><b>INR &lt;1,4</b></td><td>Stop ~5 hari sebelumnya</td></tr>
+      </tbody>
+    </table>
+    <div class="key"><b>Yang wajib ditanyakan:</b> ① Dosis terakhir? ② CrCl terkini? ③ Waktu pasti penghentian? "Sudah distop" bukan jawaban.</div>
+    <div class="cite">📚 Sumber: <a href="https://doi.org/10.1136/rapm-2024-105766" target="_blank">ASRA 2025 (RAPM)</a>; <a href="https://www.nysora.com/topics/regional-anesthesia/managing-doacs-for-neuraxial-and-nerve-block-procedures/" target="_blank">NYSORA — DOACs</a>.</div>
+  `,
+  notes: "9 agen antikoagulan dengan interval. Tanyakan dosis terakhir, CrCl, waktu pasti."
+},
+
+/* 11 */
+{
+  label: 'Pilar 2 — Kelebihan',
+  html: `
+    <span class="badge badge-mint">Pilar 2a · Kelebihan</span>
+    <h2>Kelebihan Regional Anestesi — Data &amp; Mekanisme</h2>
+    <p class="sub">Meta-analisis 12 studi, <b>n=2.796</b> (Urick 2022).</p>
+    <table>
+      <thead><tr><th>Outcome</th><th>Data</th><th>Penjelasan &amp; Implikasi</th></tr></thead>
+      <tbody>
+        <tr><td><b>PONV</b></td><td>OR 0,20 (0,15–0,26)</td><td>Turun <b>80%</b> — tanpa volatil, opioid sistemik minimal → pasien nyaman, pulang cepat.</td></tr>
+        <tr><td><b>Durasi Operasi</b></td><td>SMD −12,62 menit</td><td>Lebih singkat → turnover ruang operasi cepat.</td></tr>
+        <tr><td><b>Perdarahan</b></td><td>SMD −0,57 mL</td><td>Lebih rendah → risiko transfusi rendah.</td></tr>
+        <tr><td><b>LOS</b></td><td>SMD −0,14 hari</td><td>Lebih pendek → efisiensi biaya.</td></tr>
+        <tr><td><b>Jalan Napas</b></td><td>—</td><td>Hindari aspirasi, gagal intubasi, cedera laring.</td></tr>
+        <tr><td><b>Kognitif</b></td><td>—</td><td>Hindari POCD — relevan geriatri.</td></tr>
+      </tbody>
+    </table>
+    <div class="cite">📚 Sumber: <a href="https://doi.org/10.1016/j.jcot.2022.101923" target="_blank">Urick D, et al. J Clin Orthop Trauma 2022;30:101923</a>.</div>
+  `,
+  notes: "Kelebihan terukur: PONV turun 80%, durasi -12,6 menit, perdarahan -0,57 mL, LOS -0,14 hari."
+},
+
+/* 12 */
+{
+  label: 'Pilar 2 — Keterbatasan',
+  html: `
+    <span class="badge badge-rose">Pilar 2b · Keterbatasan</span>
+    <h2>Komplikasi — Insidens &amp; Mekanisme Singkat</h2>
+    <table>
+      <thead><tr><th>Komplikasi</th><th>Insidens</th><th>Mekanisme Singkat</th></tr></thead>
+      <tbody>
+        <tr><td><b>Hipotensi</b></td><td>70–80% (SC); 15–33% (umum)</td><td>Blok simpatis → vasodilatasi + ↓ venous return</td></tr>
+        <tr><td><b>Bradikardi</b></td><td>5–15%</td><td>Bezold-Jarisch / blok T1–T4</td></tr>
+        <tr><td><b>PDPH</b></td><td>5,9–12,7%</td><td>Kebocoran CSF → traksi meningeal <b>(detail di slide berikutnya)</b></td></tr>
+        <tr><td><b>Retensi Urin</b></td><td>5–70%</td><td>Blok S2–S4 → relaksasi detrusor</td></tr>
+        <tr><td><b>Nyeri Punggung</b></td><td>Sering</td><td>Trauma jarum, posisi, ligamentum</td></tr>
+        <tr><td><b>Hematoma Spinal</b></td><td>7,5:10.000 (lumbal)</td><td>Perdarahan epidural → kompresi medula</td></tr>
+        <tr><td><b>Kegagalan Blok</b></td><td>3–17%</td><td>Posisi jarum, dosis, anatomi, pengalaman</td></tr>
+        <tr><td><b>High Spinal</b></td><td>Jarang</td><td>Sebaran obat melebihi T4 → paralisis interkosta</td></tr>
+      </tbody>
+    </table>
+    <div class="key"><b>PDPH dijelaskan detail di 2 slide berikutnya</b> — mekanisme 6 langkah dari kebocoran CSF sampai nyeri posisional, plus faktor risiko &amp; terapi.</div>
+    <div class="cite">📚 Sumber: <a href="https://jurnal.unpad.ac.id/jnc/" target="_blank">Indriani R, et al. JNC 2025</a>; <a href="https://doi.org/10.5812/aapm.35486" target="_blank">Davoudi 2016</a>.</div>
+  `,
+  notes: "8 komplikasi dengan mekanisme singkat. PDPH ditandai detail di 2 slide berikutnya."
+},
+
+/* 13 — PDPH MEKANISME (BARU) */
+{
+  label: 'PDPH — Mekanisme Detail',
+  html: `
+    <span class="badge badge-rose">Fokus · PDPH</span>
+    <h2>PDPH — Mengapa Sakit Kepala?</h2>
+    <p class="sub"><b>PDPH</b> = Post-Dural Puncture Headache = sakit kepala setelah dura tertusuk jarum spinal. Insidens: <b>5,9–12,7%</b>.</p>
+
+    <h3>Mekanisme 6 Langkah: dari Kebocoran ke Nyeri</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body"><b>Jarum membuat lubang.</b> Jarum menembus dura mater + araknoid mater. Setelah dicabut, lubang kecil tetap ada.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body"><b>CSF bocor keluar.</b> Cairan serebrospinal merembes melalui lubang ke ruang epidural—seperti ban dalam bocor sedikit.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body"><b>Tekanan CSF menurun.</b> Volume &amp; tekanan CSF di ruang subaraknoid turun. Otak kehilangan bantalan air.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body"><b>Otak "mengendur" ke bawah (brain sagging).</b> Otak turun sedikit karena gravitasi—seperti balon di wadah air yang airnya berkurang.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body"><b>Traksi meningeal.</b> Struktur peka nyeri (meninges, vena/arteri meningeal, saraf kranial, dura basis otak) <b>tertarik</b> melebihi batas normal → nyeri. <b>"Traksi" = tarikan.</b></div>
+      </div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-body"><b>Nyeri posisional (ortostatik).</b> Duduk/berdiri → otak turun lebih jauh → traksi lebih kuat → nyeri hebat. Berbaring → gravitasi berkurang → traksi berkurang → nyeri membaik.</div>
+      </div>
+    </div>
+
+    <div class="analogy"><b>Analogi:</b> Otak = buah apel yang digantung tali di toples berisi air. Tali = meninges. Kalau air (CSF) berkurang, apel turun → tali tertarik kencang → nyeri. Toples dibaringkan → apel tidak tertarik → nyeri hilang.</div>
+
+    <div class="key"><b>Diagnosis ICHD-3:</b> nyeri memburuk dalam 15 menit berdiri/duduk, membaik dalam 15 menit berbaring, muncul dalam 5 hari pasca pungsi. Disertai ≥1: kaku leher, tinitus, fotofobia, mual.</div>
+    <div class="cite">📚 Sumber: <a href="https://ichd-3.org/7-headache-attributed-to-non-vascular-intracranial-disorder/7-2-headache-attributed-to-low-csf-pressure/7-2-2-post-dural-puncture-headache/" target="_blank">ICHD-3 — Post-Dural Puncture Headache</a>; <a href="https://doi.org/10.1016/j.bjae.2019.12.002" target="_blank">BJA Education (2020)</a>; <a href="https://nysora.com/topics/complications/post-dural-puncture-headache/" target="_blank">NYSORA — PDPH</a>.</div>
+  `,
+  notes: "6 langkah: jarum buat lubang → CSF bocor → tekanan turun → brain sagging → traksi meningeal (tarikan selaput) → nyeri posisional. Analogi apel di toples. Diagnosis ICHD-3."
+},
+
+/* 14 — PDPH FAKTOR & TERAPI (BARU) */
+{
+  label: 'PDPH — Faktor & Terapi',
+  html: `
+    <span class="badge badge-rose">Fokus · PDPH</span>
+    <h2>PDPH — Faktor Risiko &amp; Terapi</h2>
+
+    <h3>Faktor yang Mempengaruhi</h3>
+    <table>
+      <thead><tr><th>Faktor</th><th>Pengaruh</th></tr></thead>
+      <tbody>
+        <tr><td><b>Ukuran jarum</b></td><td>Lebih besar (Quincke 24G) → lubang lebih besar → PDPH 12,7%</td></tr>
+        <tr><td><b>Jenis jarum</b></td><td>Pencil-point 25–27G → ujung memisahkan serat → PDPH 5,9–10,4%</td></tr>
+        <tr><td><b>Posisi pasien</b></td><td>Lateral dekubitus → PDPH lebih rendah (RR 0,29)</td></tr>
+        <tr><td><b>Pasien</b></td><td>Perempuan muda, hamil, BMI rendah → risiko lebih tinggi</td></tr>
+        <tr><td><b>Multiple attempts</b></td><td>Setiap tusukan = lubang baru → kebocoran lebih banyak</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Terapi Bertingkat</h3>
+    <div class="cols-3">
+      <div class="col-box teal">
+        <h4>Ringan</h4>
+        <ul>
+          <li>Bed rest</li>
+          <li>Hidrasi</li>
+          <li>Kafein 300–500 mg</li>
+        </ul>
+      </div>
+      <div class="col-box amber">
+        <h4>Sedang</h4>
+        <ul>
+          <li>Parasetamol / NSAID</li>
+          <li>Antiemetik</li>
+          <li>Kafein IV</li>
+        </ul>
+      </div>
+      <div class="col-box rose">
+        <h4>Berat / &gt;48 jam</h4>
+        <ul>
+          <li><b>Epidural blood patch</b></li>
+          <li>10–20 mL darah autologus</li>
+          <li>Darah membeku menutup lubang dura</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Pencegahan</h3>
+    <ul class="pts">
+      <li><b>Jarum pencil-point 25–27G</b> — rekomendasi standar</li>
+      <li><b>Posisi lateral</b> jika memungkinkan</li>
+      <li><b>Minimalkan multiple attempts</b> — gunakan landmark jelas atau USG</li>
+    </ul>
+
+    <div class="cite">📚 Sumber: <a href="https://doi.org/10.5812/aapm.35486" target="_blank">Davoudi 2016 (RCT posisi)</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9698286/" target="_blank">Sharma 2022</a>; <a href="https://nysora.com/topics/complications/post-dural-puncture-headache/" target="_blank">NYSORA — PDPH</a>.</div>
+  `,
+  notes: "Faktor risiko: ukuran jarum, jenis jarum, posisi, pasien, multiple attempts. Terapi: ringan (bed rest, kafein), sedang (analgetik), berat (blood patch). Pencegahan: pencil-point, lateral, minimalkan attempts."
+},
+
+/* 15 */
+{
+  label: 'Pilar 2 — Faktor Modifikasi',
+  html: `
+    <span class="badge badge-rose">Pilar 2c · Faktor Modifikasi</span>
+    <h2>Faktor yang Mempengaruhi Komplikasi</h2>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Jarum Pencil-Point</h4>
+        <ul>
+          <li><b>PDPH turun:</b> 12,7% → 5,9–10,4%</li>
+          <li>Ujung memisahkan serat dura, tidak memotong</li>
+          <li>Rekomendasi 25–27G</li>
+        </ul>
+      </div>
+      <div class="col-box mint">
+        <h4>Spinal Unilateral</h4>
+        <ul>
+          <li><b>Hipotensi turun:</b> RR 0,40 (0,20–0,80)</li>
+          <li><b>Retensi urin turun:</b> RR 0,33 (0,12–0,93)</li>
+          <li>Teknik: hiperbarik + lateral 15 menit</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="col-box amber">
+        <h4>Preload &amp; Vasopressor</h4>
+        <ul>
+          <li>Kristaloid 500 mL sebelum spinal</li>
+          <li>Phenylephrine profilaksis</li>
+          <li>Ephedrine jika bradikardia dominan</li>
+        </ul>
+      </div>
+      <div class="col-box rose">
+        <h4>Posisi Pasien</h4>
+        <ul>
+          <li><b>Lateral:</b> PDPH lebih rendah (RR 0,29)</li>
+          <li><b>Duduk:</b> landmark lebih mudah</li>
+          <li>Pilihan berdasarkan prioritas</li>
+        </ul>
+      </div>
+    </div>
+    <div class="key"><b>Pesan kunci:</b> komplikasi bukan "takdir"—<b>pencil-point, unilateral, preload, posisi</b> dapat menurunkan risiko.</div>
+    <div class="cite">📚 Sumber: <a href="https://doi.org/10.5812/aapm.35486" target="_blank">Davoudi 2016</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9698286/" target="_blank">Sharma 2022</a>.</div>
+  `,
+  notes: "4 strategi modifikasi komplikasi."
+},
+
+/* 16 */
+{
+  label: 'Pilar 3 — Prinsip',
+  html: `
+    <span class="badge badge-amber">Pilar 3a · Prinsip</span>
+    <h2>Prinsip Pemilihan Teknik</h2>
+    <div class="cols-3">
+      <div class="col-box teal">
+        <h4>Spinal</h4>
+        <ul>
+          <li>Keunggulan: <b>kecepatan</b></li>
+          <li>Cocok: operasi &lt;4 jam bawah umbilikus</li>
+          <li>Keterbatasan: hipotensi, PDPH</li>
+          <li>Tidak butuh USG</li>
+        </ul>
+      </div>
+      <div class="col-box mint">
+        <h4>GA</h4>
+        <ul>
+          <li>Keunggulan: <b>fleksibilitas</b></li>
+          <li>Cocok: operasi luas/lama, napas sulit</li>
+          <li>Keterbatasan: PONV, kognitif</li>
+          <li>Butuh ventilator</li>
+        </ul>
+      </div>
+      <div class="col-box amber">
+        <h4>PNB</h4>
+        <ul>
+          <li>Keunggulan: <b>analgesia &amp; stabil</b></li>
+          <li>Cocok: ekstremitas nyeri pascaoperasi</li>
+          <li>Keterbatasan: butuh USG &amp; skill</li>
+          <li>Butuh anestesiolog terlatih</li>
+        </ul>
+      </div>
+    </div>
+    <div class="key"><b>Keputusan bersama:</b> ahli bedah–anestesi–pasien.</div>
+    <div class="cite">📚 Sumber: <a href="https://anesthesiaqr.ca/" target="_blank">Anesthesia Manual</a>; <a href="https://doi.org/10.5312/wjo.v13.i1.1" target="_blank">World J Orthop (2022)</a>.</div>
+  `,
+  notes: "3 teknik dengan keunggulan & keterbatasan."
+},
+
+/* 17 */
+{
+  label: 'Pilar 3 — Spinal vs PNB',
+  html: `
+    <span class="badge badge-amber">Pilar 3b · Spinal vs PNB</span>
+    <h2>Spinal Anestesi vs PNB — Meta-Analisis 2023</h2>
+    <p class="sub">9 RCT, n=802 — bedah kaki/ankle elektif.</p>
+    <table>
+      <thead><tr><th>Parameter</th><th>Spinal</th><th>PNB</th><th>Data (95% CI)</th></tr></thead>
+      <tbody>
+        <tr><td><b>Waktu blok</b></td><td><b>Lebih singkat</b></td><td>Lebih lama</td><td>WMD 7,47 menit (6,07–8,87)</td></tr>
+        <tr><td><b>Onset sensorik</b></td><td><b>Lebih cepat</b></td><td>Lebih lambat</td><td>WMD 7,48 menit (2,84–12,13)</td></tr>
+        <tr><td><b>Durasi blok</b></td><td>Lebih pendek</td><td><b>Jauh lebih panjang</b></td><td>WMD 458,53 menit (328,30–588,77)</td></tr>
+        <tr><td><b>Kebutuhan analgesik</b></td><td>Lebih tinggi</td><td><b>Lebih rendah</b></td><td>SMD −1,09 (−1,63 s/d −0,55)</td></tr>
+        <tr><td><b>TD sistolik 30 menit</b></td><td><b>Lebih rendah</b></td><td>Lebih stabil</td><td>WMD 13,95 mmHg (4,60–23,30)</td></tr>
+      </tbody>
+    </table>
+    <div class="key"><b>Pesan kunci:</b> spinal unggul <b>kecepatan</b>; PNB unggul <b>durasi analgesia</b> &amp; <b>stabilitas hemodinamik</b>.</div>
+    <div class="cite">📚 Sumber: <a href="https://doi.org/10.3390/jpm13071096" target="_blank">Lee M, et al. J Pers Med 2023;13(7):1096</a>.</div>
+  `,
+  notes: "Lee 2023: 9 RCT, 802 pasien."
+},
+
+/* 18 */
+{
+  label: 'Pilar 3 — Spinal vs GA',
+  html: `
+    <span class="badge badge-amber">Pilar 3c · Spinal vs GA</span>
+    <h2>Spinal Anestesi vs GA — Meta-Analisis 2022</h2>
+    <p class="sub">12 studi, n=2.796 — bedah tulang belakang lumbal.</p>
+    <table>
+      <thead><tr><th>Outcome</th><th>Efek Spinal vs GA</th><th>Interpretasi</th></tr></thead>
+      <tbody>
+        <tr><td><b>PONV</b></td><td><b>OR 0,20 (0,15–0,26)</b></td><td>Penurunan 80%</td></tr>
+        <tr><td><b>Durasi Operasi</b></td><td><b>SMD −12,62 menit</b></td><td>Lebih singkat</td></tr>
+        <tr><td><b>Perdarahan</b></td><td><b>SMD −0,57 mL</b></td><td>Lebih rendah</td></tr>
+        <tr><td><b>Waktu di PACU</b></td><td><b>SMD −0,20 menit</b></td><td>Pemulihan lebih cepat</td></tr>
+        <tr><td><b>LOS</b></td><td><b>SMD −0,14 hari</b></td><td>Rawat inap lebih pendek</td></tr>
+      </tbody>
+    </table>
+    <div class="key"><b>Pesan kunci:</b> spinal unggul pada <b>PONV, durasi, perdarahan, PACU, LOS</b>—tetapi klaim "menurunkan mortalitas universal" belum didukung.</div>
+    <div class="cite">📚 Sumber: <a href="https://doi.org/10.1016/j.jcot.2022.101923" target="_blank">Urick D, et al. J Clin Orthop Trauma 2022;30:101923</a>.</div>
+  `,
+  notes: "Urick 2022: 12 studi, 2.796 pasien."
+},
+
+/* 19 */
+{
+  label: 'Praktik — Alat & Bahan',
+  html: `
+    <span class="badge badge-teal">Praktik · Alat &amp; Bahan</span>
+    <h2>Alat, Bahan &amp; Persiapan</h2>
+    <h3>1. Alat Pungsi</h3>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Jarum Spinal</h4>
+        <ul>
+          <li><b>Pencil-point 25–27G</b> — rekomendasi</li>
+          <li><b>Quincke 22–25G</b> — cutting, PDPH lebih tinggi</li>
+          <li><b>Introducer</b> — bantu pada obesitas</li>
+          <li><b>Spuit 5 mL</b> — konfirmasi CSF &amp; injeksi</li>
+        </ul>
+      </div>
+      <div class="col-box mint">
+        <h4>Obat</h4>
+        <ul>
+          <li><b>Bupivacaine 0,5% hyperbaric</b> 10–15 mg — standar</li>
+          <li><b>Ropivacaine 0,5%</b> 15 mg — kardiotoksisitas lebih rendah</li>
+          <li><b>Fentanyl</b> 10–25 mcg — adjuvan</li>
+          <li><b>Morfin intratekal</b> 100–200 mcg — analgesia 24 jam</li>
+        </ul>
+      </div>
+    </div>
+    <h3>2. Monitoring &amp; Obat Emergensi</h3>
+    <div class="cols">
+      <div class="col-box amber">
+        <h4>Monitoring</h4>
+        <ul>
+          <li>SpO₂, NIBP, EKG</li>
+          <li>Akses IV adekuat (18–20G)</li>
+          <li>Suction &amp; oksigen siap</li>
+        </ul>
+      </div>
+      <div class="col-box rose">
+        <h4>Obat Emergensi</h4>
+        <ul>
+          <li><b>Ephedrine</b> 5–10 mg IV</li>
+          <li><b>Phenylephrine</b> 50–100 mcg IV</li>
+          <li><b>Atropin</b> 0,5 mg IV</li>
+          <li><b>Epinephrine</b> 10–100 mcg IV</li>
+          <li><b>Lipid emulsion 20%</b> — LAST</li>
+          <li><b>Suksinilkolin</b> — airway rescue</li>
+        </ul>
+      </div>
+    </div>
+    <h3>3. Asepsis</h3>
+    <ul class="pts">
+      <li><b>Chlorhexidine 2% + alkohol</b> — tunggu kering 30 detik</li>
+      <li><b>Drape steril</b>, masker, topi, sarung tangan steril</li>
+      <li><b>Operator cuci tangan</b> 3–5 menit</li>
+    </ul>
+    <div class="cite">📚 Sumber: <a href="https://nysora.com/patient-information/spinal-anesthesia/" target="_blank">NYSORA</a>; <a href="https://kms.kemkes.go.id/contents/1723169192341-11.BukuAjarANESTESIREGIONAL.pdf" target="_blank">Kemenkes RI</a>.</div>
+  `,
+  notes: "Alat: pencil-point 25-27G, introducer. Obat: bupivacaine hyperbaric 10-15 mg. Emergensi: ephedrine, phenylephrine, atropin, lipid emulsion."
+},
+
+/* 20 */
+{
+  label: 'Praktik — Prosedur Step-by-Step',
+  html: `
+    <span class="badge badge-teal">Praktik · Prosedur</span>
+    <h2>Prosedur Pungsi — 15 Tahap</h2>
+    <table>
+      <thead><tr><th>Tahap</th><th>Tindakan</th><th>Keterangan</th></tr></thead>
+      <tbody>
+        <tr><td><b>1</b></td><td>Verifikasi identitas, prosedur, sisi</td><td>WHO Surgical Safety Checklist</td></tr>
+        <tr><td><b>2</b></td><td>Informed consent</td><td>Jelaskan PDPH, retensi, hipotensi</td></tr>
+        <tr><td><b>3</b></td><td>Monitor &amp; akses IV</td><td>SpO₂, NIBP, EKG</td></tr>
+        <tr><td><b>4</b></td><td>Posisi pasien</td><td>Duduk atau lateral</td></tr>
+        <tr><td><b>5</b></td><td>Landmark</td><td><b>Linea Tuffier (L4/L4–L5)</b> midline</td></tr>
+        <tr><td><b>6</b></td><td>Asepsis</td><td>Chlorhexidine 2% + alkohol</td></tr>
+        <tr><td><b>7</b></td><td>Anestesi lokal kulit</td><td>Lidocaine 1% 2–3 mL</td></tr>
+        <tr><td><b>8</b></td><td>Pungsi dengan introducer</td><td>Sudut 15–30° cephalad</td></tr>
+        <tr><td><b>9</b></td><td>Jarum spinal masuk</td><td>Pencil-point via introducer</td></tr>
+        <tr><td><b>10</b></td><td>Konfirmasi CSF</td><td>CSF keluar spontan</td></tr>
+        <tr><td><b>11</b></td><td>Aspirasi hati-hati</td><td>Konfirmasi ulang</td></tr>
+        <tr><td><b>12</b></td><td>Injeksi obat perlahan</td><td>0,2–0,3 mL/detik</td></tr>
+        <tr><td><b>13</b></td><td>Cabut jarum + introducer</td><td>Tanpa aspirasi</td></tr>
+        <tr><td><b>14</b></td><td>Pasien supine</td><td>Segera / 15 menit unilateral</td></tr>
+        <tr><td><b>15</b></td><td>Uji level blok</td><td>Dingin (sensorik), Bromage (motorik)</td></tr>
+      </tbody>
+    </table>
+    <div class="key"><b>Pesan kunci:</b> berurutan—<b>identifikasi → asepsis → landmark → pungsi → konfirmasi CSF → injeksi → uji blok</b>.</div>
+    <div class="cite">📚 Sumber: <a href="https://nysora.com/patient-information/spinal-anesthesia/" target="_blank">NYSORA</a>; <a href="https://www.ncbi.nlm.nih.gov/books/NBK537121/" target="_blank">StatPearls</a>.</div>
+  `,
+  notes: "15 tahap prosedur pungsi."
+},
+
+/* 21 */
+{
+  label: 'Praktik — Konfirmasi & Injeksi',
+  html: `
+    <span class="badge badge-teal">Praktik · Konfirmasi &amp; Injeksi</span>
+    <h2>Konfirmasi CSF &amp; Injeksi Obat</h2>
+    <h3>1. Tanda CSF Keluar Spontan</h3>
+    <ul class="pts">
+      <li><b>CSF jernih</b> keluar spontan → konfirmasi ruang subaraknoid</li>
+      <li><b>Tidak keluar:</b> rotasi jarum 90°, cek posisi, jangan aspirasi agresif</li>
+      <li><b>Darah:</b> cek traumatik vs perdarahan aktif — pertimbangkan level lain</li>
+    </ul>
+    <h3>2. Teknik Injeksi</h3>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Kecepatan</h4>
+        <ul>
+          <li><b>Lambat:</b> 0,2–0,3 mL/detik</li>
+          <li>Cepat → sebaran cephalad berlebihan → high spinal</li>
+          <li>Lambat → sebaran terkontrol</li>
+        </ul>
+      </div>
+      <div class="col-box mint">
+        <h4>Barisitas Obat</h4>
+        <ul>
+          <li><b>Hiperbarik:</b> mengendap di bawah → blok lebih rendah</li>
+          <li><b>Hipobarik:</b> menyebar ke atas</li>
+          <li><b>Isobarik:</b> menyebar sesuai posisi</li>
+        </ul>
+      </div>
+    </div>
+    <h3>3. Setelah Injeksi</h3>
+    <ul class="pts">
+      <li><b>Tanpa aspirasi</b> saat mencabut</li>
+      <li><b>Supine</b> segera / lateral 15 menit untuk unilateral</li>
+      <li><b>Uji sensorik:</b> dingin — target sesuai dermatom</li>
+      <li><b>Uji motorik:</b> Bromage</li>
+      <li><b>Dokumentasi:</b> level, obat, dosis, jarum, komplikasi, waktu</li>
+    </ul>
+    <h3>4. Skala Bromage</h3>
+    <table>
+      <thead><tr><th>Skor</th><th>Kemampuan</th></tr></thead>
+      <tbody>
+        <tr><td><b>0</b></td><td>Gerak bebas tungkai &amp; kaki</td></tr>
+        <tr><td><b>1</b></td><td>Tidak bisa angkat tungkai lurus, bisa fleksi lutut</td></tr>
+        <tr><td><b>2</b></td><td>Tidak bisa fleksi lutut, bisa gerak kaki</td></tr>
+        <tr><td><b>3</b></td><td>Tidak bisa gerak tungkai/kaki</td></tr>
+      </tbody>
+    </table>
+    <div class="cite">📚 Sumber: <a href="https://nysora.com/patient-information/spinal-anesthesia/" target="_blank">NYSORA</a>; <a href="https://www.ncbi.nlm.nih.gov/books/NBK537121/" target="_blank">StatPearls</a>.</div>
+  `,
+  notes: "Konfirmasi CSF jernih. Injeksi lambat 0,2-0,3 mL/detik. Barisitas: hiperbarik mengendap bawah. Bromage 0-3."
+},
+
+/* 22 */
+{
+  label: 'Praktik — Monitoring',
+  html: `
+    <span class="badge badge-teal">Praktik · Monitoring</span>
+    <h2>Monitoring Intraoperatif</h2>
+    <p class="sub">Monitoring ketat—terutama 15–20 menit pertama.</p>
+    <table>
+      <thead><tr><th>Parameter</th><th>Frekuensi</th><th>Target / Tindakan</th></tr></thead>
+      <tbody>
+        <tr><td><b>Tekanan Darah</b></td><td>2–3 menit (awal), lalu 5 menit</td><td>Turun &gt;20% → vasopressor</td></tr>
+        <tr><td><b>Heart Rate</b></td><td>Kontinu</td><td>&lt;50 → atropin 0,5 mg</td></tr>
+        <tr><td><b>SpO₂</b></td><td>Kontinu</td><td>&lt;94% → oksigen, cek level blok</td></tr>
+        <tr><td><b>Level Blok</b></td><td>Awal &amp; setiap 30 menit</td><td>Naik &gt;T4 → curigai high spinal</td></tr>
+        <tr><td><b>Kesadaran</b></td><td>Kontinu</td><td>Penurunan → curigai hipoperfusi</td></tr>
+        <tr><td><b>Nyeri</b></td><td>Saat insisi &amp; manipulasi</td><td>Nyeri → blok tidak adekuat</td></tr>
+        <tr><td><b>Mual/Muntah</b></td><td>Kontinu</td><td>→ ondansetron 4 mg IV</td></tr>
+        <tr><td><b>Shivering</b></td><td>Kontinu</td><td>→ meperidine 12,5–25 mg</td></tr>
+      </tbody>
+    </table>
+    <div class="key"><b>Tanda Bahaya:</b> sesak, tidak bisa bicara, lemah lengan, penurunan kesadaran, hipotensi refrakter, bradikardia berat.</div>
+    <div class="cite">📚 Sumber: <a href="https://nysora.com/patient-information/spinal-anesthesia/" target="_blank">NYSORA</a>; <a href="https://doi.org/10.1016/j.bjae.2019.12.002" target="_blank">BJA Education (2020)</a>.</div>
+  `,
+  notes: "Monitoring: TD 2-3 menit awal, HR, SpO2, level blok, kesadaran, nyeri, mual, shivering. Tanda bahaya: sesak, hipotensi refrakter."
+},
+
+/* 23 */
+{
+  label: 'Praktik — Hipotensi & Bradikardia',
+  html: `
+    <span class="badge badge-teal">Praktik · Penanganan</span>
+    <h2>Penanganan Hipotensi &amp; Bradikardia</h2>
+    <h3>1. Hipotensi</h3>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Langkah 1 — Evaluasi</h4>
+        <ul>
+          <li>Cek level blok (naik ke T4?)</li>
+          <li>Cek perdarahan, kompresi aortokaval</li>
+          <li>Cek HR — bradikardia atau takikardia?</li>
+        </ul>
+      </div>
+      <div class="col-box amber">
+        <h4>Langkah 2 — Tindakan</h4>
+        <ul>
+          <li><b>Preload</b> kristaloid 250–500 mL cepat</li>
+          <li><b>Phenylephrine</b> 50–100 mcg (HR normal/tinggi)</li>
+          <li><b>Ephedrine</b> 5–10 mg (HR rendah)</li>
+          <li><b>Posisi:</b> head-up ringan, geser uterus (obstetri)</li>
+          <li><b>Oksigen</b> 4–6 L/menit</li>
+        </ul>
+      </div>
+    </div>
+    <h3>2. Bradikardia</h3>
+    <div class="cols">
+      <div class="col-box mint">
+        <h4>Penyebab</h4>
+        <ul>
+          <li>Bezold-Jarisch (preload rendah)</li>
+          <li>Blok simpatis T1–T4</li>
+          <li>Traksi viseral</li>
+        </ul>
+      </div>
+      <div class="col-box rose">
+        <h4>Tindakan</h4>
+        <ul>
+          <li><b>Atropin</b> 0,5 mg IV (dapat diulang)</li>
+          <li><b>Ephedrine</b> 5–10 mg (jika hipotensi)</li>
+          <li><b>Epinephrine</b> 10–100 mcg (berat/refrakter)</li>
+          <li>Hentikan traksi viseral jika memungkinkan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="key"><b>Pesan kunci:</b> hipotensi + bradikardia = <b>atropin + ephedrine</b>. Hipotensi + takikardia = <b>phenylephrine</b>.</div>
+    <div class="cite">📚 Sumber: <a href="https://nysora.com/patient-information/spinal-anesthesia/" target="_blank">NYSORA</a>; <a href="https://www.ncbi.nlm.nih.gov/books/NBK537121/" target="_blank">StatPearls</a>.</div>
+  `,
+  notes: "Hipotensi: preload, phenylephrine (HR normal), ephedrine (HR rendah). Bradikardia: atropin, ephedrine, epinephrine."
+},
+
+/* 24 */
+{
+  label: 'Praktik — Komplikasi Lain',
+  html: `
+    <span class="badge badge-teal">Praktik · Komplikasi Lain</span>
+    <h2>Penanganan Komplikasi Lain</h2>
+    <table>
+      <thead><tr><th>Komplikasi</th><th>Tanda</th><th>Penanganan</th></tr></thead>
+      <tbody>
+        <tr><td><b>High Spinal Block</b></td><td>Sesak, tidak bisa bicara, lemah lengan, penurunan kesadaran</td><td>Hentikan operasi, airway (intubasi), vasopressor, CPR jika henti jantung</td></tr>
+        <tr><td><b>LAST</b></td><td>Tinnitus, metalik, kejang, aritmia</td><td><b>Lipid emulsion 20%</b> 1,5 mL/kg, lalu infus 0,25 mL/kg/menit. Airway &amp; CPR.</td></tr>
+        <tr><td><b>PDPH</b></td><td>Sakit kepala ortostatik, 24–48 jam pasca</td><td>Bed rest, hidrasi, kafein, <b>blood patch</b> jika berat</td></tr>
+        <tr><td><b>Retensi Urin</b></td><td>Tidak bisa BAK &gt;6 jam, bladder scan &gt;400 mL</td><td>Kateterisasi selektif</td></tr>
+        <tr><td><b>Nyeri Punggung</b></td><td>Nyeri lokal 24–72 jam</td><td>Analgetik sederhana, kompres hangat</td></tr>
+        <tr><td><b>Meningitis</b></td><td>Demam, kaku kuduk, penurunan kesadaran</td><td>Kultur CSF, antibiotik empiris segera</td></tr>
+        <tr><td><b>Hematoma Spinal</b></td><td>Nyeri punggung berat, defisit neurologis progresif</td><td><b>MRI emergensi</b>, dekompresi bedah &lt;8 jam</td></tr>
+      </tbody>
+    </table>
+    <div class="key"><b>Pesan kunci:</b> <b>LAST</b> = lipid emulsion. <b>High spinal</b> = airway. <b>Hematoma</b> = MRI + dekompresi &lt;8 jam.</div>
+    <div class="cite">📚 Sumber: <a href="https://www.asra.com/" target="_blank">ASRA — LAST Checklist</a>; <a href="https://nysora.com/" target="_blank">NYSORA</a>; <a href="https://doi.org/10.1016/j.bjae.2019.12.002" target="_blank">BJA Education (2020)</a>.</div>
+  `,
+  notes: "7 komplikasi lain: high spinal, LAST, PDPH, retensi, nyeri punggung, meningitis, hematoma."
+},
+
+/* 25 */
+{
+  label: 'Pilar 4 — Posisi Duduk',
+  html: `
+    <span class="badge badge-cream">Pilar 4a · Duduk</span>
+    <h2>Posisi Duduk — Instruksi Komunikatif</h2>
+    <p class="sub">Instruksi <b>bertahap &amp; mudah dipahami</b>—terutama lansia. Hindari istilah abstrak.</p>
+    <h3>🎯 Tujuan Dulu</h3>
+    <div class="script-box">
+      <span class="say">Katakan:</span>
+      <span class="quote">"Bapak/Ibu, kita akan melakukan suntikan bius di punggung. Supaya jarumnya mudah masuk dan tidak sakit, saya minta Bapak/Ibu mengikuti tiga langkah sederhana ini. Kalau ada yang tidak jelas, bilang saja, ya."</span>
+    </div>
+    <h3>📋 Tiga Langkah</h3>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Langkah 1 — Duduk</h4>
+        <div class="script-box">
+          <span class="say">Katakan:</span>
+          <span class="quote">"Silakan duduk di tepi tempat tidur. Kakinya menggantung ke bawah, santai saja."</span>
+        </div>
+      </div>
+      <div class="col-box mint">
+        <h4>Langkah 2 — Peluk Bantal</h4>
+        <div class="script-box">
+          <span class="say">Katakan:</span>
+          <span class="quote">"Sekarang, tolong <b>peluk bantal ini</b> di depan dada—seperti memeluk bantal tidur. Peluknya erat, ya."</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-box amber">
+      <h4>Langkah 3 — Membungkuk ke Depan (Bukan ke Belakang)</h4>
+      <div class="script-box">
+        <span class="say">Katakan:</span>
+        <span class="quote">"Setelah itu, <b>condongkan badan ke depan</b>—seperti mau menyentuh lutut sendiri. Punggungnya <b>melengkung ke depan</b>, jangan ditegakkan. Kepala boleh menunduk. Rasanya seperti <b>membungkuk untuk mengambil sesuatu di lantai</b>, tapi tetap duduk."</span>
+      </div>
+    </div>
+    <h3>✅ Verifikasi (Teach-Back)</h3>
+    <div class="script-box">
+      <span class="say">Katakan:</span>
+      <span class="quote">"Coba Bapak/Ibu ulangi: peluk bantal, lalu badan condong ke depan dan punggung melengkung. Sudah, ya? Bagus, tahan posisi ini sebentar, saya hitung sampai tiga."</span>
+    </div>
+    <div class="key"><b>Kesalahan yang dicegah:</b> jangan minta menegakkan punggung atau melengkungkan ke belakang—ini menutup ruang antar-tulang.</div>
+    <div class="cite">📚 Sumber: <a href="https://medbox.org/preview/56dd9ac3-9754-47fe-b2bd-481f1fcc7b89/doc.pdf" target="_blank">Medbox</a>; <a href="https://kms.kemkes.go.id/contents/1723169192341-11.BukuAjarANESTESIREGIONAL.pdf" target="_blank">Kemenkes RI</a>.</div>
+  `,
+  notes: "Instruksi komunikatif 3 langkah + teach-back."
+},
+
+/* 26 */
+{
+  label: 'Pilar 4 — Posisi Lateral',
+  html: `
+    <span class="badge badge-cream">Pilar 4b · Lateral</span>
+    <h2>Posisi Lateral Dekubitus — Teknik Rinci</h2>
+    <p class="sub">Membutuhkan <b>fleksi maksimal</b> pinggul &amp; leher untuk membuka ruang interspinous.</p>
+    <h3>📋 Enam Tahap Teknik</h3>
+    <table>
+      <thead><tr><th>Tahap</th><th>Tindakan</th><th>Tujuan</th></tr></thead>
+      <tbody>
+        <tr><td><b>1</b></td><td>Berbaring miring kanan/kiri</td><td>Posisi dasar</td></tr>
+        <tr><td><b>2</b></td><td>Punggung sejajar tepi meja</td><td>Landmark midline jelas</td></tr>
+        <tr><td><b>3</b></td><td>Tarik kedua lutut ke dada</td><td>Membuka ruang interspinous</td></tr>
+        <tr><td><b>4</b></td><td>Tundukkan kepala ke dada</td><td>Ruang antar-vertebra lebih lebar</td></tr>
+        <tr><td><b>5</b></td><td>Posisi fetal — meringkuk</td><td>Posisi optimal pungsi</td></tr>
+        <tr><td><b>6</b></td><td>Unilateral: pertahankan 15 menit</td><td>Lateralisasi blok maksimal</td></tr>
+      </tbody>
+    </table>
+    <h3>🎯 Instruksi Komunikatif</h3>
+    <div class="script-box">
+      <span class="say">Katakan:</span>
+      <span class="quote">"Bapak/Ibu, sekarang kita minta <b>berbaring miring</b>. Badan menghadap ke samping. Saya bantu geser supaya <b>punggung sejajar dengan tepi tempat tidur</b>. Setelah itu, <b>tarik kedua lutut ke arah perut</b>—seperti mau memeluk lutut sendiri. Lalu <b>tundukkan kepala ke dada</b>. Jadi posisinya seperti <b>janin dalam kandungan</b>—meringkuk. Kalau sakit, tarik sebisanya saja. Tahan posisi ini, ya."</span>
+    </div>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Sisi Dependen (Bawah)</h4>
+        <p>Untuk anestesi <b>hiperbarik</b> — blok lebih dalam pada sisi bawah.</p>
+      </div>
+      <div class="col-box amber">
+        <h4>Sisi Nondependen (Atas)</h4>
+        <p>Untuk anestesi <b>hipobarik/isobarik</b> — blok lebih dalam pada sisi atas.</p>
+      </div>
+    </div>
+    <div class="cite">📚 Sumber: <a href="https://medbox.org/preview/56dd9ac3-9754-47fe-b2bd-481f1fcc7b89/doc.pdf" target="_blank">Medbox</a>; <a href="https://kms.kemkes.go.id/contents/1723169192341-11.BukuAjarANESTESIREGIONAL.pdf" target="_blank">Kemenkes RI</a>.</div>
+  `,
+  notes: "6 tahap lateral. Instruksi komunikatif. Sisi dependen vs nondependen."
+},
+
+/* 27 */
+{
+  label: 'Pilar 4 — Perbandingan',
+  html: `
+    <span class="badge badge-cream">Pilar 4c · Perbandingan</span>
+    <h2>Duduk vs Lateral — Berbasis Bukti</h2>
+    <table>
+      <thead><tr><th>Parameter</th><th>Duduk</th><th>Lateral</th><th>Sumber</th></tr></thead>
+      <tbody>
+        <tr><td><b>Landmark</b></td><td><b>Unggul</b> (obesitas)</td><td>Lebih sulit</td><td>Sharma 2022</td></tr>
+        <tr><td><b>Kenyamanan</b></td><td>Cukup</td><td><b>Unggul</b> (lemah)</td><td>Repository ITEKES</td></tr>
+        <tr><td><b>PDPH</b></td><td>Lebih tinggi (12,7%)</td><td><b>Lebih rendah</b> (RR 0,29)</td><td>Davoudi 2016; meta 6 RCT</td></tr>
+        <tr><td><b>Hipotensi</b></td><td>Sedikit lebih tinggi</td><td><b>Lebih rendah</b> (RR 0,83)</td><td>Meta 5 RCT</td></tr>
+        <tr><td><b>Kompresi aortokaval</b></td><td><b>Dihindari</b></td><td>Tidak ada</td><td>Sharma 2022</td></tr>
+        <tr><td><b>Lateralisasi</b></td><td>Sulit</td><td><b>Mudah</b> (15 menit)</td><td>LWW 2013</td></tr>
+        <tr><td><b>Risiko Jatuh</b></td><td><b>Ada</b></td><td>Tidak ada</td><td>Klinis</td></tr>
+      </tbody>
+    </table>
+    <div class="key"><b>Ringkasnya:</b> <b>Duduk</b> untuk landmark sulit/obesitas/obstetri. <b>Lateral</b> untuk kenyamanan, PDPH &amp; hipotensi lebih rendah, lateralisasi.</div>
+    <div class="cite">📚 Sumber: <a href="https://doi.org/10.5812/aapm.35486" target="_blank">Davoudi 2016</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9698286/" target="_blank">Sharma 2022</a>.</div>
+  `,
+  notes: "Duduk unggul landmark & obstetri; lateral unggul PDPH, hipotensi, kenyamanan, lateralisasi."
+},
+
+/* 28 */
+{
+  label: 'Pilar 4 — Peran Asisten',
+  html: `
+    <span class="badge badge-cream">Pilar 4d · Peran Asisten</span>
+    <h2>Peran Asisten — Krusial di Setiap Tahap</h2>
+    <h3>1. Sebelum Prosedur</h3>
+    <ul class="pts">
+      <li><b>Verifikasi identitas &amp; informed consent</b></li>
+      <li><b>Siapkan alat &amp; obat</b> — jarum pencil-point, bupivacaine, spuit, introducer</li>
+      <li><b>Siapkan obat emergensi</b> — ephedrine, phenylephrine, atropin, lipid emulsion</li>
+      <li><b>Monitor terpasang</b>, akses IV adekuat</li>
+      <li><b>Posisikan pasien</b> sesuai rencana</li>
+    </ul>
+    <h3>2. Selama Prosedur</h3>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>Posisi Duduk</h4>
+        <ul>
+          <li><b>Pegang bahu &amp; punggung</b> — cegah jatuh</li>
+          <li>Bantu peluk bantal</li>
+          <li>Jaga privasi</li>
+          <li>Pantau tanda vital</li>
+          <li>Bantu berbaring cepat setelah injeksi</li>
+        </ul>
+      </div>
+      <div class="col-box amber">
+        <h4>Posisi Lateral</h4>
+        <ul>
+          <li><b>Bantu fleksi</b> lutut &amp; leher</li>
+          <li>Jaga punggung sejajar tepi meja</li>
+          <li><b>Bantalan ketiak</b> — cegah kompresi saraf aksila</li>
+          <li>Tahan posisi 15 menit (unilateral)</li>
+          <li>Pantau tanda vital</li>
+        </ul>
+      </div>
+    </div>
+    <h3>3. Setelah Prosedur</h3>
+    <ul class="pts">
+      <li><b>Uji level blok</b> — sensorik (dingin) &amp; motorik (Bromage)</li>
+      <li><b>Monitor komplikasi</b> — hipotensi, bradikardia, mual, shivering</li>
+      <li><b>Dokumentasi:</b> level, obat, dosis, jarum, komplikasi, waktu</li>
+      <li><b>Komunikasi dengan operator</b></li>
+    </ul>
+    <div class="key"><b>Pesan kunci:</b> asisten terlatih <b>mengurangi komplikasi &amp; mempercepat prosedur</b>.</div>
+    <div class="cite">📚 Sumber: <a href="https://kms.kemkes.go.id/contents/1723169192341-11.BukuAjarANESTESIREGIONAL.pdf" target="_blank">Kemenkes RI</a>; <a href="https://medbox.org/preview/56dd9ac3-9754-47fe-b2bd-481f1fcc7b89/doc.pdf" target="_blank">Medbox</a>.</div>
+  `,
+  notes: "Peran asisten: sebelum, selama (duduk/lateral), setelah prosedur."
+},
+
+/* 29 */
+{
+  label: 'Simulasi & Studi Kasus',
+  html: `
+    <span class="badge badge-rose">Simulasi</span>
+    <h2>Studi Kasus Diskusi</h2>
+    <div class="case">
+      <span class="label">Kasus 1 — Cesar Elektif Obesitas</span>
+      Perempuan 32 tahun, BMI 38, 39 minggu, SC elektif. <b>Pertanyaan:</b> posisi? Level blok? Antisipasi?
+      <br><br><b>Jawaban:</b> <b>Duduk</b>—landmark mudah &amp; hindari kompresi aortokaval. Level <b>T4</b>. Antisipasi: hipotensi, mual, PDPH (pencil-point).
+    </div>
+    <div class="case">
+      <span class="label">Kasus 2 — Lansia Lemah, ORIF Ankle</span>
+      Laki-laki 78 tahun, lemah, ORIF ankle. <b>Pertanyaan:</b> posisi? Mengapa?
+      <br><br><b>Jawaban:</b> <b>Lateral dekubitus</b>—nyaman, hipotensi ortostatik rendah, PDPH rendah. Unilateral: pertahankan <b>15 menit</b>.
+    </div>
+    <div class="case">
+      <span class="label">Kasus 3 — AF + Apixaban, TURP</span>
+      Laki-laki 68 tahun, AF on apixaban 5 mg BID, rencana TURP. <b>Pertanyaan:</b> boleh spinal? Kapan?
+      <br><br><b>Jawaban:</b> Apixaban dosis tinggi → <b>≥72 jam</b> (ginjal normal). Cek CrCl, konfirmasi waktu dosis terakhir. Jika belum, tunda.
+    </div>
+    <div class="case">
+      <span class="label">Kasus 4 — Hipotensi Intraoperatif</span>
+      Perempuan 45 tahun, ORIF ankle. 10 menit post-injeksi: TD 120/80 → 85/50, HR 58. <b>Pertanyaan:</b> langkah?
+      <br><br><b>Jawaban:</b> <b>Atropin 0,5 mg</b> + <b>ephedrine 5–10 mg</b>. Preload 250 mL. Cek level blok (mungkin naik T4). Oksigen.
+    </div>
+    <div class="case">
+      <span class="label">Kasus 5 — PDPH Pasca SC</span>
+      Perempuan 28 tahun, SC dengan spinal. 48 jam pasca: sakit kepala berat saat duduk/berdiri, membaik saat berbaring. <b>Pertanyaan:</b> diagnosis &amp; penanganan?
+      <br><br><b>Jawaban:</b> <b>PDPH</b> (mekanisme: kebocoran CSF → traksi meningeal). Bed rest, hidrasi, kafein. Jika tidak membaik 24–48 jam → <b>epidural blood patch</b>.
+    </div>
+    <div class="cite">📚 Sumber: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9698286/" target="_blank">Sharma 2022</a>; <a href="https://doi.org/10.5812/aapm.35486" target="_blank">Davoudi 2016</a>; <a href="https://doi.org/10.1136/rapm-2024-105766" target="_blank">ASRA 2025</a>; <a href="https://nysora.com/" target="_blank">NYSORA</a>.</div>
+  `,
+  notes: "5 kasus: cesar obesitas, lansia lemah, apixaban, hipotensi+bradikardia, PDPH."
+},
+
+/* 30 */
+{
+  label: 'Penutup',
+  html: `
+    <span class="badge badge-teal">Penutup</span>
+    <h2>Tujuh Hal yang Dibawa Pulang</h2>
+    <div class="cols">
+      <div class="col-box teal">
+        <h4>1. Mekanisme &amp; Level Blok</h4>
+        <p>Spinal bekerja di <b>ruang subaraknoid</b>. Level blok sesuai dermatom: T4 puting, T10 pusar, L4 maleolus medial. L1–L2 titik pungsi tinggi → risiko high spinal.</p>
+      </div>
+      <div class="col-box mint">
+        <h4>2. Indikasi &amp; Kontraindikasi</h4>
+        <p>Indikasi: bawah umbilikus, 1,5–4 jam. <b>Stenosis aorta berat = absolut</b>. Antikoagulan = waktu: apixaban 72 jam, dabigatran CrCl &lt;50 = 120 jam.</p>
+      </div>
+      <div class="col-box amber">
+        <h4>3. Kelebihan &amp; Keterbatasan</h4>
+        <p>PONV turun 80%, durasi −12,6 menit, LOS −0,14 hari. Komplikasi: hipotensi 70–80% (SC), PDPH 5,9–12,7%, retensi 5–70%.</p>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="col-box rose">
+        <h4>4. PDPH Detail</h4>
+        <p>Mekanisme: lubang dura → CSF bocor → tekanan turun → <b>brain sagging</b> → <b>traksi meningeal</b> → nyeri ortostatik. Pencegahan: pencil-point, lateral, minimalkan attempts. Terapi: blood patch jika berat.</p>
+      </div>
+      <div class="col-box teal">
+        <h4>5. Prosedur &amp; Monitoring</h4>
+        <p>15 tahap: verifikasi → asepsis → landmark → pungsi → konfirmasi CSF → injeksi lambat. TD 2–3 menit awal. Hipotensi + bradikardia → atropin + ephedrine.</p>
+      </div>
+      <div class="col-box mint">
+        <h4>6. Posisi &amp; Asisten</h4>
+        <p><b>Duduk:</b> landmark mudah, obstetri. <b>Lateral:</b> PDPH RR 0,29, hipotensi RR 0,83. Unilateral 15 menit. Instruksi komunikatif wajib untuk lansia.</p>
+      </div>
+    </div>
+    <div class="key"><b>Tiga pertanyaan sebelum menusukkan jarum:</b> ① Operasi apa &amp; level blok berapa? ② Bagaimana profil pasien? ③ Apa yang diminum—sejak kapan?</div>
+  `,
+  notes: "7 poin: mekanisme & level blok, indikasi/kontraindikasi, kelebihan/keterbatasan, PDPH detail, prosedur & monitoring, posisi & asisten."
+},
+
+/* 31 */
+{
+  label: 'Daftar Pustaka',
+  html: `
+    <span class="badge badge-teal">Daftar Pustaka</span>
+    <h2>Sumber Ilmiah dengan Link Akses</h2>
+    <ol class="refs">
+      <li><b>StatPearls.</b> Spinal Anesthesia (2024). <a href="https://www.ncbi.nlm.nih.gov/books/NBK537121/" target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK537121/</a></li>
+      <li><b>NYSORA.</b> Spinal Anesthesia (2025). <a href="https://nysora.com/patient-information/spinal-anesthesia/" target="_blank">https://nysora.com/patient-information/spinal-anesthesia/</a></li>
+      <li><b>NCBI Bookshelf.</b> Spinal Opioids in Anesthetic Practice (2025). <a href="https://www.ncbi.nlm.nih.gov/books/NBK564409/" target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK564409/</a></li>
+      <li><b>ASRA.</b> Regional Anesthesia in the Patient Receiving Antithrombotic or Thrombolytic Therapy (5th ed., 2025). <a href="https://doi.org/10.1136/rapm-2024-105766" target="_blank">https://doi.org/10.1136/rapm-2024-105766</a></li>
+      <li><b>NYSORA.</b> Managing DOACs (2025). <a href="https://www.nysora.com/topics/regional-anesthesia/managing-doacs-for-neuraxial-and-nerve-block-procedures/" target="_blank">https://www.nysora.com/topics/regional-anesthesia/managing-doacs-for-neuraxial-and-nerve-block-procedures/</a></li>
+      <li><b>Urick D, et al.</b> J Clin Orthop Trauma. 2022;30:101923. <a href="https://doi.org/10.1016/j.jcot.2022.101923" target="_blank">https://doi.org/10.1016/j.jcot.2022.101923</a></li>
+      <li><b>Lee M, et al.</b> J Pers Med. 2023;13(7):1096. <a href="https://doi.org/10.3390/jpm13071096" target="_blank">https://doi.org/10.3390/jpm13071096</a></li>
+      <li><b>Davoudi M, et al.</b> PMC5100205 (2016). <a href="https://doi.org/10.5812/aapm.35486" target="_blank">https://doi.org/10.5812/aapm.35486</a></li>
+      <li><b>Sharma H, et al.</b> Indian J Anaesth. 2022;66(10):738–740. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9698286/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC9698286/</a></li>
+      <li><b>Kongur E, et al.</b> Acta Clin Croat. 2021;60(1):68–74. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8305355/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC8305355/</a></li>
+      <li><b>BJA Education.</b> Complications of spinal anaesthesia (2020). <a href="https://doi.org/10.1016/j.bjae.2019.12.002" target="_blank">https://doi.org/10.1016/j.bjae.2019.12.002</a></li>
+      <li><b>BJA Education.</b> Continuous spinal anaesthesia (2022). <a href="https://doi.org/10.1016/j.bjae.2021.11.004" target="_blank">https://doi.org/10.1016/j.bjae.2021.11.004</a></li>
+      <li><b>Indriani R, et al.</b> JNC 2025. <a href="https://jurnal.unpad.ac.id/jnc/" target="_blank">https://jurnal.unpad.ac.id/jnc/</a></li>
+      <li><b>World J Orthop.</b> Regional anesthesia for orthopedic procedures (2022). <a href="https://doi.org/10.5312/wjo.v13.i1.1" target="_blank">https://doi.org/10.5312/wjo.v13.i1.1</a></li>
+      <li><b>Kemenkes RI.</b> Buku Ajar Anestesi Regional. <a href="https://kms.kemkes.go.id/contents/1723169192341-11.BukuAjarANESTESIREGIONAL.pdf" target="_blank">https://kms.kemkes.go.id/contents/1723169192341-11.BukuAjarANESTESIREGIONAL.pdf</a></li>
+      <li><b>Medbox.</b> Positioning for Spinal Anesthesia. <a href="https://medbox.org/preview/56dd9ac3-9754-47fe-b2bd-481f1fcc7b89/doc.pdf" target="_blank">https://medbox.org/preview/56dd9ac3-9754-47fe-b2bd-481f1fcc7b89/doc.pdf</a></li>
+      <li><b>Physiopedia.</b> Dermatomes. <a href="https://www.physio-pedia.com/Dermatomes" target="_blank">https://www.physio-pedia.com/Dermatomes</a></li>
+      <li><b>StatPearls.</b> Anatomy, Skin, Dermatomes (2024). <a href="https://www.ncbi.nlm.nih.gov/books/NBK535401/" target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK535401/</a></li>
+      <li><b>NYSORA.</b> High Spinal Block. <a href="https://nysora.com/topics/complications/high-spinal-block/" target="_blank">https://nysora.com/topics/complications/high-spinal-block/</a></li>
+      <li><b>NYSORA.</b> Post-Dural Puncture Headache. <a href="https://nysora.com/topics/complications/post-dural-puncture-headache/" target="_blank">https://nysora.com/topics/complications/post-dural-puncture-headache/</a></li>
+      <li><b>ICHD-3.</b> Post-Dural Puncture Headache. <a href="https://ichd-3.org/7-headache-attributed-to-non-vascular-intracranial-disorder/7-2-headache-attributed-to-low-csf-pressure/7-2-2-post-dural-puncture-headache/" target="_blank">https://ichd-3.org/.../7-2-2-post-dural-puncture-headache/</a></li>
+      <li><b>ASRA.</b> LAST Checklist. <a href="https://www.asra.com/" target="_blank">https://www.asra.com/</a></li>
+      <li><b>CME Learn.</b> Neuraxial Anesthesia. <a href="https://www.cmelearn.org/" target="_blank">https://www.cmelearn.org/</a></li>
+      <li><b>WFSA.</b> ATOTW — Complete Spinal Block. <a href="https://resources.wfsahq.org/" target="_blank">https://resources.wfsahq.org/</a></li>
+    </ol>
+    <div class="cite">Semua link dapat diklik. Verifikasi ulang ke full-text sebelum presentasi resmi.</div>
+  `,
+  notes: "24 sumber dengan link yang bisa diklik."
+}
+
+];
+
+/* LOGIC */
+let cur = 0;
+const slideEl = document.getElementById('slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const curNum = document.getElementById('curNum');
+const totNum = document.getElementById('totNum');
+const progressBar = document.getElementById('progressBar');
+const dotsEl = document.getElementById('dots');
+const topLabel = document.getElementById('topLabel');
+const notesPanel = document.getElementById('notesPanel');
+const notesBody = document.getElementById('notesBody');
+const notesSlideNum = document.getElementById('notesSlideNum');
+const notesBtn = document.getElementById('notesBtn');
+const closeNotes = document.getElementById('closeNotes');
+
+totNum.textContent = slides.length;
+
+slides.forEach((_, i) => {
+  const d = document.createElement('button');
+  d.className = 'dot';
+  d.title = 'Slide ' + (i + 1);
+  d.addEventListener('click', () => goTo(i));
+  dotsEl.appendChild(d);
+});
+
+function render() {
+  const s = slides[cur];
+  slideEl.innerHTML = s.html;
+  slideEl.style.animation = 'none';
+  void slideEl.offsetWidth;
+  slideEl.style.animation = 'fadeIn .3s ease';
+
+  curNum.textContent = cur + 1;
+  topLabel.textContent = s.label;
+  progressBar.style.width = ((cur + 1) / slides.length * 100) + '%';
+
+  document.querySelectorAll('.dot').forEach((d, i) => {
+    d.classList.toggle('active', i === cur);
+  });
+
+  prevBtn.disabled = cur === 0;
+  nextBtn.disabled = cur === slides.length - 1;
+
+  notesBody.textContent = s.notes;
+  notesSlideNum.textContent = 'Slide ' + (cur + 1) + ' — ' + s.label;
+
+  slideEl.scrollTop = 0;
+}
+
+function goTo(i) {
+  if (i < 0 || i >= slides.length) return;
+  cur = i;
+  render();
+}
+
+prevBtn.addEventListener('click', () => goTo(cur - 1));
+nextBtn.addEventListener('click', () => goTo(cur + 1));
+notesBtn.addEventListener('click', () => notesPanel.classList.toggle('open'));
+closeNotes.addEventListener('click', () => notesPanel.classList.remove('open'));
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+    e.preventDefault(); goTo(cur + 1);
+  } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+    e.preventDefault(); goTo(cur - 1);
+  } else if (e.key === 'n' || e.key === 'N') {
+    notesPanel.classList.toggle('open');
+  } else if (e.key === 'Home') { goTo(0); }
+  else if (e.key === 'End') { goTo(slides.length - 1); }
+});
+
+render();
+</script>
+</body>
+</html>
